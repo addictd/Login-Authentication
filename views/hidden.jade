@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  != messages()
+  h1 This is hidden content.
+
+  if details_avail
+    h3= "hello"
+    h3 Your details
+    h3 Your id is : #{details_avail._id}
+    h3 Your sex is : #{details_avail.sex}
+    h3 Your height is : #{details_avail.height}
+    h3 Your age is : #{details_avail.age}
+  else
+    form(action='/hidden', method='POST')
+      //
+        .form-group
+          label(for='id') Enter ID
+          input#id.form-control(type='text',name='id', placeholder='')
+      .form-group
+        label(for='sex') Enter Sex
+        input#sex.form-control(type='text',name='sex', placeholder='')
+      .form-group
+        label(for='height') Enter your Height
+        input#height.form-control(type='number',name='height', placeholder='')
+      .form-group
+        label(for='age') Enter your Age
+        input#age.form-control(type='number',name='age', placeholder='')
+      button.btn.btn-primary(type='submit') Submit
+
+      

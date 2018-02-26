@@ -1,0 +1,8 @@
+18th February 2018
+
+It is simple login authentication made over 
+
+expressjs
+passportjs
+
+It can be used as a sample for other projects as well.
